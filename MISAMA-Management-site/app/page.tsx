@@ -1,12 +1,10 @@
 import Image from "next/image";
 
 const brands = [
-  { name: "Maanos", tag: "Expériences", text: "Le massage sur mesure, pensé comme un rituel de récupération profondément personnel.", url: "https://www.maanos.com", image: "https://image.thum.io/get/width/1200/crop/800/noanimate/https://www.maanos.com" },
-  { name: "Smooden", tag: "Produits", text: "Des huiles de massage naturelles développées pour le geste, la peau et les sens.", url: "https://www.smooden.com", image: "https://image.thum.io/get/width/1200/crop/800/noanimate/https://www.smooden.com/fr" },
-  { name: "MOLM", tag: "Gifting", text: "Le cadeau bien-être qui met le choix, l'attention et l'expérience au centre.", url: "https://www.molm-care.com", image: "https://image.thum.io/get/width/1200/crop/800/noanimate/https://www.molm-care.com/fr" },
-  { name: "My Massage Shop", tag: "Commerce", text: "La destination e-commerce des produits et équipements dédiés au massage.", url: "https://www.mymassageshop.com", image: "https://image.thum.io/get/width/1200/crop/800/noanimate/https://www.mymassageshop.com" },
-  { name: "De Coiffer", tag: "Beauté", text: "Des salons où expertise, style et confiance en soi forment une expérience singulière.", url: "https://www.decoiffer.lu", image: "https://image.thum.io/get/width/1200/crop/800/noanimate/https://www.decoiffer.lu" },
-  { name: "Directa Luxembourg", tag: "Lieux", text: "L'acquisition et la valorisation d'actifs immobiliers au service de projets durables.", url: "https://directa-luxembourg.vercel.app/", image: "https://image.thum.io/get/width/1200/crop/800/noanimate/https://directa-luxembourg.vercel.app/" },
+  { name: "Maanos", tag: "Expériences", text: "Le massage sur mesure, pensé comme un rituel de récupération profondément personnel.", url: "https://www.maanos.com", logo: "/images/maanos-logo-white.png", logoClass: "maanos" },
+  { name: "MOLM", tag: "Gifting", text: "Le cadeau bien-être qui met le choix, l'attention et l'expérience au centre.", url: "https://www.molm-care.com", logo: "/images/molm-logo-white.png", logoClass: "molm" },
+  { name: "My Massage Shop", tag: "Commerce", text: "La destination e-commerce des produits et équipements dédiés au massage.", url: "https://www.mymassageshop.com", logo: "/images/mymassageshop-logo-white.png", logoClass: "mymassageshop" },
+  { name: "Smooden", tag: "Produits", text: "Des huiles de massage naturelles développées pour le geste, la peau et les sens.", url: "https://www.smooden.com", logo: "/images/smooden-logo-white.png", logoClass: "smooden" },
 ];
 
 const pillars = [
@@ -37,9 +35,7 @@ export default function Home() {
             <a href="#studio">Découvrir le studio <span>↓</span></a>
           </div>
         </div>
-        <div className="heroVisual" role="img" aria-label="Rituel de soin et de bien-être">
-          <span className="heroBadge">Care<br />in every<br />detail.</span>
-        </div>
+        <div className="heroVisual" role="img" aria-label="Rituel de soin et de bien-être" />
       </section>
 
       <section className="manifesto" id="studio">
@@ -79,8 +75,10 @@ export default function Home() {
         <div className="brandGrid shell">
           {brands.map((brand, index) => (
             <a className="brandCard" href={brand.url} target="_blank" rel="noreferrer" key={brand.name}>
-              <div className="brandImage" style={{backgroundImage:`linear-gradient(180deg,rgba(41,31,27,.02),rgba(41,31,27,.76)),url(${brand.image})`}} />
               <div className="cardTop"><span>{String(index+1).padStart(2,"0")}</span><Arrow/></div>
+              <div className={`brandLogoWrap ${brand.logoClass}`}>
+                <Image className="brandLogo" src={brand.logo} alt={`${brand.name} — ouvrir le site`} fill sizes="(max-width: 620px) 70vw, 34vw" />
+              </div>
               <div className="cardCopy"><p>{brand.tag}</p><h3>{brand.name}</h3><div className="line"/><p className="description">{brand.text}</p></div>
             </a>
           ))}

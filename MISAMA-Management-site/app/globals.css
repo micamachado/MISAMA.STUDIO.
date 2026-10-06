@@ -292,7 +292,7 @@ a {
 }
 .brandGrid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 16px;
 }
 .brandCard {
@@ -309,6 +309,33 @@ a {
 }
 .brandCard:hover {
   transform: translateY(-7px);
+}
+.brandLogoWrap {
+  position: absolute;
+  z-index: 1;
+  top: 24%;
+  left: 14%;
+  right: 14%;
+  height: 31%;
+}
+.brandLogo {
+  object-fit: contain;
+  transition: transform .55s ease, opacity .35s ease;
+}
+.brandLogoWrap.molm {
+  left: 17%;
+  right: 17%;
+}
+.brandLogoWrap.mymassageshop {
+  top: 20%;
+  height: 39%;
+}
+.brandLogoWrap.smooden {
+  left: 12%;
+  right: 12%;
+}
+.brandCard:hover .brandLogo {
+  transform: scale(1.035);
 }
 .brandImage {
   position: absolute;
