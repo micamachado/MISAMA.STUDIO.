@@ -410,6 +410,19 @@ a {
   color: var(--taupe);
   margin-right: 22px;
 }
+.caseText {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 34px;
+  margin-top: 58px;
+  padding-top: 30px;
+  border-top: 1px solid var(--line);
+}
+.caseText p {
+  color: var(--text-soft);
+  font-size: 13px;
+  line-height: 1.85;
+}
 .contact {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -480,6 +493,10 @@ footer p {
   .portfolioHead,
   .platform {
     grid-template-columns: 1fr;
+  }
+  .caseText {
+    grid-template-columns: 1fr;
+    gap: 18px;
   }
   .brandGrid {
     grid-template-columns: 1fr 1fr;

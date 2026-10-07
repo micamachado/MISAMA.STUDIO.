@@ -8,9 +8,9 @@ const brands = [
 ];
 
 const pillars = [
-  { number: "01", title: "Développer", text: "Nous transformons une intuition en une marque désirable : positionnement, identité, offre et expérience." },
-  { number: "02", title: "Commercialiser", text: "Nous construisons les bons canaux, du lieu physique au digital, pour rapprocher chaque marque de son public." },
-  { number: "03", title: "Faire grandir", text: "Nous mutualisons stratégie, opérations et savoir-faire pour créer une croissance cohérente et durable." },
+  { number: "01", title: "Observer", text: "Nous étudions l'évolution des modes de vie, des comportements et des attentes pour identifier les besoins auxquels les modèles existants ne répondent plus suffisamment." },
+  { number: "02", title: "Repenser", text: "Nous remettons en question les habitudes et les codes établis pour imaginer des expériences plus simples, plus personnelles et plus adaptées à la vie contemporaine." },
+  { number: "03", title: "Développer", text: "Nous transformons ces idées en marques, services et produits concrets, puis nous les faisons évoluer durablement au rythme de leurs clients et de leur marché." },
 ];
 
 function Arrow() { return <span aria-hidden="true">↗</span>; }
@@ -23,15 +23,15 @@ export default function Home() {
         <nav aria-label="Navigation principale">
           <a href="#studio">Le studio</a><a href="#expertise">Notre savoir-faire</a><a href="#marques">Nos marques</a>
         </nav>
-        <a className="navCta" href="mailto:contact@misama-management.com">Parlons-nous <Arrow /></a>
+        <a className="navCta" href="mailto:contact@misama.studio">Contact <Arrow /></a>
       </header>
 
       <section className="hero shell">
         <div className="heroCopy">
           <p className="kicker">Brand studio · Luxembourg</p>
-          <h1>Nous créons les marques qui font du <em>bien.</em></h1>
+          <h1>Nous repensons le bien-être pour le monde <em>d'aujourd'hui.</em></h1>
           <div className="heroStatement">
-            <p>MISAMA est un studio spécialisé dans le développement, la commercialisation et le commerce de marques de bien-être, wellness et self-care.</p>
+            <p>MISAMA.STUDIO est un studio luxembourgeois spécialisé dans la création et le développement de marques wellness et self-care, à travers les services, les produits, le retail et l'e-commerce.</p>
             <a href="#studio">Découvrir le studio <span>↓</span></a>
           </div>
         </div>
@@ -42,10 +42,10 @@ export default function Home() {
         <div className="shell manifestoGrid">
           <p className="sectionLabel">01 — Le studio</p>
           <div>
-            <p className="lead">Nous croyons que prendre soin de soi n'est plus un luxe. C'est une nouvelle façon de vivre, de consommer et de créer du lien.</p>
+            <p className="lead">Le bien-être n'est pas une notion figée. Nos rythmes de vie évoluent, nos besoins changent et les modèles d'hier ne répondent pas toujours aux réalités d'aujourd'hui.</p>
             <div className="manifestoText">
-              <p>MISAMA imagine, lance et développe des concepts qui placent le mieux-être au cœur du quotidien. Nous réunissons sous un même studio des expériences, des produits, des services et des lieux.</p>
-              <p>Chaque marque conserve sa personnalité. Toutes bénéficient d'une vision commune, d'une exigence partagée et d'un écosystème conçu pour accélérer leur développement.</p>
+              <p>MISAMA observe l'évolution des usages pour identifier ce qui peut être simplifié, amélioré ou rendu plus accessible. Nous développons ensuite des expériences, des services et des produits capables d'apporter une réponse concrète aux besoins du moment.</p>
+              <p>Chaque marque possède son identité, mais toutes partagent la même philosophie : comprendre le monde dans lequel nous vivons afin d'y réadapter le bien-être, sans jamais banaliser la qualité de l'expérience.</p>
             </div>
           </div>
         </div>
@@ -58,7 +58,7 @@ export default function Home() {
         <div className="shell">
           <div className="sectionHead">
             <p className="sectionLabel">02 — Notre savoir-faire</p>
-            <h2>De l'idée au marché,<br/><em>un seul studio.</em></h2>
+            <h2>Comprendre aujourd'hui.<br/><em>Imaginer demain.</em></h2>
           </div>
           <div className="pillarGrid">
             {pillars.map((pillar) => <article key={pillar.number}><span>{pillar.number}</span><h3>{pillar.title}</h3><p>{pillar.text}</p></article>)}
@@ -70,7 +70,7 @@ export default function Home() {
         <div className="shell portfolioHead">
           <p className="sectionLabel">03 — Notre écosystème</p>
           <h2>Des marques singulières.<br/><em>Une vision partagée.</em></h2>
-          <p>Un portefeuille construit autour des nouveaux usages du soin, de la beauté, du bien-être et de leurs espaces.</p>
+          <p>Des expériences, des produits et des services complémentaires, conçus autour d'une même volonté : rendre le bien-être plus pertinent, plus personnel et plus accessible.</p>
         </div>
         <div className="brandGrid shell">
           {brands.map((brand, index) => (
@@ -86,19 +86,23 @@ export default function Home() {
       </section>
 
       <section className="platform shell">
-        <p className="sectionLabel">04 — La plateforme</p>
-        <div><h2>Le wellness,<br/>sous toutes ses formes.</h2>
-          <div className="platformRows"><span>Expériences & services</span><span>Produits & formulation</span><span>E-commerce & distribution</span><span>Retail & lieux</span></div>
+        <p className="sectionLabel">04 — Maanos, depuis 2015</p>
+        <div><h2>Du massage sur mesure<br/>à une <em>nouvelle norme.</em></h2>
+          <div className="caseText">
+            <p>Lorsque nous avons créé Maanos en 2015, le massage était encore souvent proposé à travers des protocoles prédéfinis. Le client choisissait une durée ou une technique, mais l'expérience laissait peu de place à ses besoins réels, à son état physique ou à ses préférences personnelles.</p>
+            <p>Nous avons développé une approche pionnière autour du massage sur mesure. Chaque soin est construit autour de la personne, de ses tensions, de ses attentes et de ce dont elle a besoin au moment de sa visite. Encore rare en 2015, cette personnalisation est progressivement devenue une nouvelle référence du secteur.</p>
+            <p>Nous avons aussi voulu sortir le massage d'un univers parfois considéré comme occasionnel, intimidant ou réservé à une clientèle privilégiée. En le rendant plus lisible, plus contemporain et plus accessible, Maanos a contribué à le démocratiser comme pratique régulière de récupération, de prévention et de bien-être.</p>
+          </div>
         </div>
       </section>
 
       <section className="contact" id="contact">
         <div className="contactPhoto" aria-hidden="true" />
         <div className="contactCopy">
-          <p className="sectionLabel">05 — Construisons ensemble</p>
-          <h2>Une marque à révéler.<br/><em>Une idée à faire grandir.</em></h2>
-          <p>Entrepreneurs, partenaires, talents ou propriétaires : parlons de ce que nous pourrions construire ensemble.</p>
-          <a href="mailto:contact@misama-management.com">contact@misama-management.com <Arrow/></a>
+          <p className="sectionLabel">05 — Notre vision</p>
+          <h2>Repenser les usages.<br/><em>Faire évoluer le bien-être.</em></h2>
+          <p>Nous voulons contribuer à faire évoluer le bien-être au même rythme que la société, en créant des concepts plus humains, plus intuitifs et plus accessibles. MISAMA.STUDIO développe aujourd'hui les usages qui nous sembleront naturels demain.</p>
+          <a href="mailto:contact@misama.studio">contact@misama.studio <Arrow/></a>
           <address>26, avenue de la Faïencerie<br/>L-1510 Luxembourg</address>
         </div>
       </section>
